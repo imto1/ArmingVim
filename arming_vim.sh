@@ -1,12 +1,10 @@
 #!/bin/bash
-cd ~
-clear
+git clone https://github.com/imto1/ArmingVim.git
+mv ArmingVim ~/.vim
+mv ~/.vim/vimrc ~/.vimrc
+rm ~/.vim/LICENSE ~/.vim/README.md
+
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-touch .vimrc
-echo "syntax on" >> .vimrc
-echo "filetype on" >> .vimrc
-echo "call plug#begin('~/.vim/plugged')" >> .vimrc
-echo "Plug 'junegunn/vim-easy-align'" >> .vimrc
-echo "call plug#end()" >> .vimrc
+echo "Ignore Vim errors on first launch. After Vim opens, run PlugInstall command."
