@@ -21,6 +21,7 @@ set tabstop=4
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+set nofoldenable
 setlocal foldmethod=indent
 set t_Co=256
 set nowrap
